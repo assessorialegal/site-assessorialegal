@@ -1,9 +1,8 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Assessoria Legal Integrada</title>
   <style>
     body {
@@ -12,101 +11,132 @@
       background-color: #0d1c26;
       color: #f0f0f0;
     }
+    nav {
+      background-color: #021a28;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem;
+    }
+    nav a {
+      color: #aad5ff;
+      text-decoration: none;
+      font-weight: bold;
+    }
     header {
-      background-color: #031b1e;
+      background-image: url("imagem-inicio.png");
+      background-size: cover;
+      background-position: center;
       text-align: center;
-      padding: 3rem 1rem;
+      padding: 8rem 2rem 10rem;
     }
     header h1 {
-      font-size: 2.5rem;
-      margin: 0;
+      font-size: 3rem;
+      color: white;
+      margin-bottom: 0.5rem;
     }
     header p {
-      margin-top: 0.5rem;
-      font-size: 1.2rem;
+      font-size: 1.3rem;
       color: #aad5ff;
     }
-    section {
+    .section {
       max-width: 1000px;
       margin: 2rem auto;
       padding: 2rem;
       background-color: #1a2b33;
       border-radius: 8px;
+      display: none;
     }
-    h2 {
+    .section h2 {
       color: #aad5ff;
+    }
+    .section ul li {
+      margin-bottom: 0.5rem;
     }
     .quote {
       text-align: center;
       font-style: italic;
-      margin-top: 2rem;
       color: #aad5ff;
-    }
-    ul li {
-      margin-bottom: 0.5rem;
+      margin-top: 2rem;
     }
     footer {
+      background-color: #021a28;
       text-align: center;
       padding: 2rem;
-      background-color: #031b1e;
-      color: #cccccc;
       font-size: 0.9rem;
+      color: #cccccc;
     }
-    .img-container {
+    .bio-img {
       text-align: center;
-      margin-bottom: 2rem;
+      margin-bottom: 1.5rem;
     }
-    .img-container img {
-      max-width: 100%;
-      border-radius: 10px;
+    .bio-img img {
+      max-width: 180px;
+      border-radius: 8px;
     }
   </style>
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('.section').forEach(s => s.style.display = 'none');
+      document.getElementById(id).style.display = 'block';
+    }
+    window.onload = function() {
+      showSection('inicio');
+    }
+  </script>
 </head>
 <body>
-
-<header>
-  <h1>Assessoria Legal Integrada</h1>
-  <p>Consultoria e Suporte em Soluções Jurídicas</p>
-</header>
-
-<section>
-  <div class="img-container">
-    <img src="capa-leao-celular.png" alt="Imagem capa com leão e celular">
-  </div>
-
-  <h2>Sobre o Dr. Felipe Gonçalves de Oliveira</h2>
-  <p>Com mais de 9 anos de experiência nas áreas cível, trabalhista, empresarial e previdenciária, o Dr. Felipe (OAB/SP 374439) oferece suporte jurídico eficaz para pessoas físicas e empresas. A gestão dos atendimentos e agendamentos é feita por sua assistente jurídica, Janaina Felix Oliveira.</p>
-
-  <h2>Missão, Visão & Atendimento</h2>
-  <ul>
-    <li>📌 Tornar o Direito acessível para todos.</li>
-    <li>📌 Explicar de forma clara o que você precisa saber.</li>
-    <li>📌 Propor soluções práticas e seguras para o seu caso.</li>
-    <li>📌 Atendimento com empatia, escuta e clareza.</li>
-  </ul>
-
-  <h2>Serviços Jurídicos</h2>
-  <ul>
-    <li>✔ Consultas jurídicas online (aposentadoria, trabalhista, cível, empresarial)</li>
-    <li>✔ Planejamento previdenciário e revisão de benefícios (INSS/LOAS)</li>
-    <li>✔ Elaboração de contratos e petições em português</li>
-    <li>✔ Parecer jurídico detalhado</li>
-    <li>✔ Assessoria preventiva para empresas e autônomos</li>
-  </ul>
-
-  <h2>Agendamento de Consultas</h2>
-  <p>Cada consulta tem duração de até 1 hora e inclui orientação personalizada ou emissão de parecer, conforme necessidade.</p>
-  <strong>Valor: R$ 250,00</strong><br>
-  <p>💬 O valor é informado via WhatsApp no momento do agendamento, mostrando nosso compromisso em oferecer soluções acessíveis com transparência e respeito.</p>
-
-  <div class="quote">
-    “Uma assessoria jurídica de qualidade vai além da lei escrita — atua com empatia, clareza e foco em soluções que consideram a realidade, os direitos e os deveres de cada pessoa, sempre em conformidade com a legislação vigente.”
-  </div>
-</section>
-
-<footer>
-  © 2025 Assessoria Legal Integrada | Dr. Felipe Gonçalves de Oliveira
-</footer>
-
+  <nav>
+    <a href="#" onclick="showSection('inicio')">Início</a>
+    <a href="#" onclick="showSection('sobre')">Sobre</a>
+    <a href="#" onclick="showSection('missao')">Missão & Visão</a>
+    <a href="#" onclick="showSection('servicos')">Serviços</a>
+    <a href="#" onclick="showSection('contato')">Agendamento</a>
+  </nav>
+  <header id="inicio">
+    <h1>Assessoria Legal Integrada</h1>
+    <p>Consultoria e Suporte em Soluções Jurídicas</p>
+  </header>
+  <section id="sobre" class="section">
+    <div class="bio-img">
+      <img src="foto-felipe.jpg" alt="Foto do Dr. Felipe">
+    </div>
+    <h2>Sobre o Dr. Felipe Gonçalves de Oliveira</h2>
+    <p>Fundador da Assessoria Legal Integrada, o Dr. Felipe possui mais de 9 anos de atuação nas áreas cível, trabalhista, previdenciária e empresarial. OAB/SP 374439.</p>
+    <p>Além de advogado, é também idealizador de um projeto de vida que une clareza, justiça e compromisso com resultados reais, buscando sempre oferecer orientação segura aos seus clientes.</p>
+    <div class="quote">
+      “Uma assessoria jurídica de qualidade vai além da lei escrita — atua com empatia, clareza e foco em soluções que consideram a realidade, os direitos e os deveres de cada pessoa, sempre em conformidade com a legislação vigente.”<br>
+      <strong>– Dr. Felipe Gonçalves de Oliveira – OAB/SP 374439</strong>
+    </div>
+  </section>
+  <section id="missao" class="section">
+    <h2>Missão, Visão & Atendimento</h2>
+    <ul>
+      <li><strong>Missão:</strong> Tornar o Direito acessível com linguagem clara.</li>
+      <li><strong>Visão:</strong> Ser referência em soluções jurídicas online.</li>
+      <li><strong>Atendimento:</strong> Escuta ativa, empatia, clareza, respeito.</li>
+    </ul>
+  </section>
+  <section id="servicos" class="section">
+    <h2>Serviços Jurídicos</h2>
+    <ul>
+      <li>✔ Consultas jurídicas online</li>
+      <li>✔ Planejamento previdenciário</li>
+      <li>✔ Elaboração de contratos e petições</li>
+      <li>✔ Parecer jurídico</li>
+      <li>✔ Assessoria preventiva empresarial</li>
+    </ul>
+  </section>
+  <section id="contato" class="section">
+    <h2>Agendamento & Contato</h2>
+    <p>🕒 Atendimento: Segunda a Sábado, das 10h às 22h | Domingo, das 16h às 22h</p>
+    <p>💼 Valor da consulta: <strong>R$ 250,00</strong> | Duração: 1 hora</p>
+    <p>✅ Aceitamos pagamento via Pix (qualquer banco) e Cartões de Débito e Crédito (PagSeguro, Mercado Pago).</p>
+    <p>⚠ O pagamento deve ser feito até 15 minutos antes do horário marcado.</p>
+    <p><a href="https://wa.me/5599999999999" style="color:#aad5ff;">Agende sua consulta pelo WhatsApp</a></p>
+  </section>
+  <footer>
+    © 2025 Assessoria Legal Integrada – Dr. Felipe Gonçalves de Oliveira | OAB/SP 374439
+  </footer>
 </body>
 </html>
