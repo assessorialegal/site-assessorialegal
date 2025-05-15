@@ -1,0 +1,1 @@
+// Script de interações (menu, WhatsApp, etc.)
