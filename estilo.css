@@ -1,0 +1,47 @@
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f7f9;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+header.hero {
+  background-color: #003c6e;
+  color: white;
+  text-align: center;
+  padding: 6rem 2rem;
+}
+.titulo {
+  font-size: 2.5rem;
+}
+.subtitulo {
+  font-size: 1.2rem;
+}
+.botoes a {
+  margin: 0.5rem;
+  padding: 0.8rem 1.5rem;
+  background: #004d80;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+}
+main {
+  padding: 2rem;
+}
+section {
+  margin-bottom: 2rem;
+}
+.foto-felipe {
+  max-width: 180px;
+  border-radius: 10px;
+  display: block;
+  margin-bottom: 1rem;
+}
+footer {
+  text-align: center;
+  background: #003354;
+  color: white;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
